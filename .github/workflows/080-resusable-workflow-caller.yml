@@ -9,7 +9,7 @@ on:
   
 jobs:
  call-workflow-A:
-    uses: venkatesh853/Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
+    uses: Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
 
     with:
      username: venkatesh853
@@ -17,7 +17,7 @@ jobs:
      token: ${{ secrets.TOKEN }}
      
  call-workflow-B:
-   uses: venkatesh853/Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
+   uses: Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
    with:
     username: venkatesh853
    secrets:
