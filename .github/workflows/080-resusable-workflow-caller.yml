@@ -5,10 +5,10 @@ on:
  pull_request:
   branches: none # [main]
   
-  workflow_dispatch:
+ workflow_dispatch:
   
-  jobs:
-    call-workflow-A:
+jobs:
+ call-workflow-A:
     uses: venkatesh853/Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
 
     with:
@@ -16,7 +16,7 @@ on:
     secrets:
      token: ${{ secrets.TOKEN }}
      
-  call-workflow-B:
+ call-workflow-B:
    uses: venkatesh853/Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
    with:
     username: Dellai
