@@ -13,6 +13,6 @@ on:
 jobs:
  example_job:
   runs-on: ubuntu-latest
-  steps:
+    steps:
     name: Run s hello world script
     run: echo Hello, ${{ inputs.username }}
