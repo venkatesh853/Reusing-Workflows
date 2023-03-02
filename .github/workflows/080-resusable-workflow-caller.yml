@@ -1,0 +1,24 @@
+name: 080-resusable-workflow-caller
+on: 
+ push:
+   branches: none # [main]
+ pull_request:
+  branches: none # [main]
+  
+  workflow_dispatch:
+  
+  jobs:
+    call-workflow-A:
+    uses: venkatesh853/Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
+
+    with:
+     username: Housesem
+    secrets:
+     token: ${{ secrets.TOKEN }}
+     
+  call-workflow-B:
+   uses: venkatesh853/Reusing-Workflows/ .github/workflows/080-resusable-workflow-caller.yml@main
+   with:
+    username: Dellai
+   secrets:
+    token: ${{ secrets.TOKEN }}
